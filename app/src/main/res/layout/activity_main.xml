@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/introText"
         android:layout_centerHorizontal="true"
-        android:text="Sick game boys" />
+        android:text="@string/intro" />
 
     <Button
         android:layout_width="wrap_content"
@@ -24,7 +24,7 @@
         android:id="@+id/startGameButton"
         android:layout_below="@+id/introText"
         android:layout_centerHorizontal="true"
-        android:text="Start game"/>
+        android:text="@string/introButton"/>
 
 
 </RelativeLayout>

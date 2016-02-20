@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Achtung</string>
+    <string name="intro">Sick game boys</string>
+    <string name="introButton">Start game</string>
 </resources>

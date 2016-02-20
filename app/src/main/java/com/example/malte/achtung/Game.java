@@ -51,7 +51,7 @@ public class Game extends AppCompatActivity{
         while(a < 100) {
 
 
-            
+
 
             for(Player p:players) {
 
