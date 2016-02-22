@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
         players = new ArrayList<Player>();
 
 
-        Player p1 = new Player(100, 100, 10, Color.GREEN);
-        Player p2 = new Player(500, 500, 10, Color.RED);
+        Player p1 = new Player(100, 100, 1, Color.GREEN);
+        Player p2 = new Player(500, 500, 1, Color.RED);
         players.add(p1);
         players.add(p2);
 

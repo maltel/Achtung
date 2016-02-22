@@ -38,7 +38,7 @@ public class Game extends AppCompatActivity{
 
         gameIsDone = false;
 
-        //run();
+        run();
 
 
 
@@ -47,14 +47,22 @@ public class Game extends AppCompatActivity{
 
 
     public void run(){
-        while(!gameIsDone) {
+        int a = 0;
+        while(a < 100) {
+
+
+
+
             for(Player p:players) {
 
                 p.setyPos(p.getyPos() + p.getSpeed());
                 p.setxPos(p.getxPos() + p.getSpeed());
+                p.addToPath(p.getxPos() + p.getSpeed(), p.getyPos() + p.getSpeed());
                 //Log.d("NFID", "jfidf");
                 gw.invalidate();
+
             }
+            a++;
         }
     }
 
