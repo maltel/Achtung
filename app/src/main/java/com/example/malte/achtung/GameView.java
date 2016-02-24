@@ -1,10 +1,12 @@
 package com.example.malte.achtung;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 
@@ -18,11 +20,14 @@ public class GameView extends View {
     Paint paint = new Paint();
     ArrayList<Player> players;
 
-    public GameView(Context context, ArrayList<Player> players) {
-        super(context);
-        this.players = players;
 
+    public GameView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        players = ((Game)getContext()).getPlayers();
     }
+
+
+
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);

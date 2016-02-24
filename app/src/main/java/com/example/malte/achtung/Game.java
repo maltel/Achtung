@@ -9,6 +9,7 @@ import android.graphics.Paint;
 import android.graphics.PointF;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -30,11 +31,18 @@ public class Game extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        players = (ArrayList<Player>) getIntent().getSerializableExtra("players");
-        gw = new GameView(this, players);
-        setContentView(gw);
+        setContentView(R.layout.activity_game);
 
         //setup all the stuff we need
+
+        players = new ArrayList<Player>();
+        gw = R.id.GameView;
+
+
+        Player p1 = new Player(100, 100, 1, Color.GREEN);
+        Player p2 = new Player(500, 500, 1, Color.RED);
+        players.add(p1);
+        players.add(p2);
 
         gameIsDone = false;
 
@@ -42,6 +50,10 @@ public class Game extends AppCompatActivity{
 
 
 
+    }
+
+    public ArrayList<Player> getPlayers() {
+        return this.players;
     }
 
 

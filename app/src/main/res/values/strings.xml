@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Achtung</string>
     <string name="intro">Sick game boys</string>
-    <string name="introButton">Start game</string>
+    <string name="singleplayerButton">Singleplayer</string>
+    <string name="multiplayerButton">Multiplayer</string>
+    <string name="leftButton">Left</string>
+    <string name="rightButton">Right</string>
 </resources>

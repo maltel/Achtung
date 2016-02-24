@@ -13,7 +13,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ArrayList<Player> players;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,22 +21,23 @@ public class MainActivity extends AppCompatActivity {
 
         //setup all the stuff we need
 
-        players = new ArrayList<Player>();
 
 
-        Player p1 = new Player(100, 100, 1, Color.GREEN);
-        Player p2 = new Player(500, 500, 1, Color.RED);
-        players.add(p1);
-        players.add(p2);
-
-
-
-        final Button start_game_button = (Button) this.findViewById(R.id.startGameButton);
-        start_game_button.setOnClickListener(new View.OnClickListener() {
+        final Button single_player_button = (Button) this.findViewById(R.id.singleplayerButton);
+        single_player_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final Intent game = new Intent(MainActivity.this, Game.class);
-                game.putExtra("players", players);
+                startActivity(game);
+
+            }
+        });
+
+        final Button multi_player_button = (Button) this.findViewById(R.id.multiplayerButton);
+        multi_player_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Intent game = new Intent(MainActivity.this, Game.class);
                 startActivity(game);
 
             }
@@ -47,9 +47,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public ArrayList<Player> getPlayers() {
-        return this.players;
-    }
 
 
 

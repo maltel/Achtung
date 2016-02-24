@@ -21,10 +21,18 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/startGameButton"
+        android:id="@+id/singleplayerButton"
         android:layout_below="@+id/introText"
         android:layout_centerHorizontal="true"
-        android:text="@string/introButton"/>
+        android:text="@string/singleplayerButton"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/multiplayerButton"
+        android:layout_below="@+id/singleplayerButton"
+        android:layout_centerHorizontal="true"
+        android:text="@string/multiplayerButton"/>
 
 
 </RelativeLayout>
