@@ -23,7 +23,10 @@ public class GameView extends View {
 
     public GameView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        players = ((Game)getContext()).getPlayers();
+    }
+
+    public void setPlayers(ArrayList<Player> players) {
+        this.players = players;
     }
 
 

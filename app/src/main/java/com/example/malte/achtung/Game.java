@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PointF;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -17,6 +18,7 @@ import android.widget.ImageView;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.logging.Handler;
 
 /**
  * Created by Malte on 17.02.2016.
@@ -36,13 +38,15 @@ public class Game extends AppCompatActivity{
         //setup all the stuff we need
 
         players = new ArrayList<Player>();
-        gw = R.id.GameView;
+        gw = (GameView) findViewById(R.id.GameView);
 
 
         Player p1 = new Player(100, 100, 1, Color.GREEN);
         Player p2 = new Player(500, 500, 1, Color.RED);
         players.add(p1);
         players.add(p2);
+
+        gw.setPlayers(players);
 
         gameIsDone = false;
 
